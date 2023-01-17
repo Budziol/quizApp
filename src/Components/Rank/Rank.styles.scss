@@ -1,0 +1,55 @@
+@import "../../Styles/Variables/Variables.scss";
+
+.rankSection {
+  @include homeContainer;
+  margin-top: 1.5rem;
+  gap: 1rem;
+  z-index: 2;
+  .sectionName {
+    color: $secondaryFontColor;
+    margin-top: 1rem;
+  }
+  .categories {
+    display: grid;
+    grid-template-columns: 1fr;
+    width: 90%;
+    overflow-y: scroll;
+    height: 70%;
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
+    margin-top: 1rem;
+
+    @media (min-width: 768px) {
+      width: 50%;
+    }
+
+    @media (min-width: 1024px) {
+      width: 30%;
+    }
+
+    &::-webkit-scrollbar {
+      display: none;
+    }
+
+    .rankItem {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      width: 100%;
+      margin-top: 0.5rem;
+
+      .categoryName {
+        @include categoryName;
+        color: $secondaryFontColor;
+      }
+
+      .index {
+        font-weight: bold;
+      }
+
+      .nickName {
+      }
+      .points {
+      }
+    }
+  }
+}

@@ -1,0 +1,49 @@
+@import "../../Styles/Variables/Variables.scss";
+
+.quizesSection {
+  @include homeContainer;
+  margin-top: 1.5rem;
+  z-index: 2;
+  .sectionName {
+    color: $secondaryFontColor;
+    margin-top: 1rem;
+  }
+
+  .categories {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 1rem;
+    justify-content: center;
+    overflow-y: scroll;
+    height: 74%;
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
+
+    &::-webkit-scrollbar {
+      display: none;
+    }
+    a:-webkit-any-link {
+      color: #fff;
+      cursor: pointer;
+      text-decoration: none;
+    }
+
+    .categoryWrapper {
+      background-color: $bgColor;
+      border-radius: $borderRadius;
+      width: 130px;
+      height: 130px;
+      padding: 1rem;
+      margin: 1rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-between;
+
+      .categoryName {
+        @include categoryName;
+        min-height: 50px;
+      }
+    }
+  }
+}
